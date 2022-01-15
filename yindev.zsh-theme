@@ -9,7 +9,7 @@ function real_time() {
 function host_name() {
     local color="%{$fg_no_bold[cyan]%}";                    # color in PROMPT need format in %{XXX%} which is not same with echo
     local color_reset="%{$reset_color%}";
-    echo "${color}[%B%n%b]${color_reset}";
+    echo "${color}[%n]${color_reset}";
 }
 
 function directory() {
@@ -19,8 +19,8 @@ function directory() {
     echo "📁 ${color}${directory}${color_reset}";
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}[%{$fg_no_bold[yellow]%}%B";
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%b ";
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}[%{$fg_no_bold[yellow]%}";
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} ";
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}] 🔥";
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}] ⚡️";
 
