@@ -8,26 +8,19 @@ function real_time() {
 
 function host_name() {
     local color="%{$fg_no_bold[cyan]%}";                    # color in PROMPT need format in %{XXX%} which is not same with echo
-    local ip
-    if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        ip="$(hostname)";
-    elif [[ "$OSTYPE" == "darwin"* ]]; then
-        ip="$(hostname)";
-    else
-    fi
     local color_reset="%{$reset_color%}";
-    echo "${color}[%n@${ip}]${color_reset}";
+    echo "${color}[%B%n%b]${color_reset}";
 }
 
 function directory() {
     local color="%{$fg_no_bold[white]%}";
-    local directory="${PWD/#$HOME/~}";
+    local directory="%B%1~%b";
     local color_reset="%{$reset_color%}";
-    echo "📁${color}${directory}${color_reset}";
+    echo "📁 ${color}${directory}${color_reset}";
 }
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}[%{$fg_no_bold[yellow]%}";
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} ";
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[red]%}[%{$fg_no_bold[yellow]%}%B";
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}%b ";
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg_no_bold[red]%}] 🔥";
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_no_bold[red]%}] ⚡️";
 
