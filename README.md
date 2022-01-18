@@ -1,4 +1,4 @@
-# gndx-zsh-theme
+# yindev-zsh-theme
 
 An oh-my-zsh theme.
 
