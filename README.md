@@ -2,7 +2,7 @@
 
 An oh-my-zsh theme.
 
-## Introducion
+## Introduction
 
 ![yindev zsh theme](https://raw.githubusercontent.com/menyinch/yindev-zsh-theme/master/screenshot.png)
 
