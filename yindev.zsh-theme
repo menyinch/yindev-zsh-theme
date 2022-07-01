@@ -100,4 +100,4 @@ TRAPALRM() {
     fi
 }
 
-PROMPT='$(real_time) $(directory) $(git_status)$(command_status) ';
+PROMPT='$(real_time) $(directory) $(git_status)$(command_status)';
