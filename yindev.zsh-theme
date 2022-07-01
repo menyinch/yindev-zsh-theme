@@ -48,7 +48,7 @@ function update_command_status() {
 update_command_status true;
 
 function command_status() {
-    echo "${COMMAND_STATUS}"
+    echo "${COMMAND_STATUS} "
 }
 
 output_command_execute_after() {
